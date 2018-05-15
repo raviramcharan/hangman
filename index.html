@@ -10,42 +10,49 @@
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
 <div class= "container">
-  <div class="row">
-
-    <div class="col-md-12">
-    	<h1>Raad het woord!</h1><br/>
-      	<p>Een spel in het teken van Plat4Mation. Voor het maken van dit spel is er gebruik gemaakt van AngularJS. Daarnaast is de app responsive gemaakt met behulp van Bootstrap. Het spel is een vorm van het bekende spel 'Galgje'. Hierbij zijn er woorden uitgekozen welke betrekking hebben op Plat4Mation. Veel speelplezier!</p>
-    </div>
-  </div>
-
+	<div class="jumbotron jumbotron-fluid">
+  		<div class="container">
+   		 <h1 class="display-4 guesses">Raad het woord!</h1>
+    	<p class="lead guesses">Een spel in het teken van Plat4Mation. Voor het maken van dit spel is er gebruik gemaakt van AngularJS. Daarnaast is de app responsive gemaakt met behulp van Bootstrap. Het spel is een vorm van het bekende spel 'Galgje'. Hierbij zijn er woorden uitgekozen welke betrekking hebben op Plat4Mation. Veel speelplezier!</p>
+  		</div>
+	</div>
 
 	<div>
 		<div class="guesses">
-			<i class="fas fa-dice"></i> {{guesses}}
+			<i class="fas fa-dice"></i> 
 		</div>
-
+		<br/>
+		<div class="guesses">Aantal kansen: {{guesses}}</div>
+		<br/>
 		<div class="row">
 			<div class="col-md-6 guesses">
-				<i class="far fa-thumbs-up iconGuess"></i> <br/>
-				<span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+				<i class="far fa-thumbs-down iconGuess"></i> <br/>
 			</div>
 
 			<div class="col-md-6 guesses">
-				<i class="far fa-thumbs-down iconGuess"></i><br/>
+				<i class="far fa-thumbs-up iconGuess"></i><br/>
+			</div>
+		</div><br/>
+
+		<div class="row heightletters">
+			<div class="col-md-6 guesses">
+				<span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+			</div>
+			<div class="col-md-6 guesses">
 				<span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
 			</div>
-
 		</div>
 
-		<div class="guesses">You have to guess: {{displayWord}} </div>
+		<div class="guesses">You have to guess: {{displayWord}} </div><br/>
 		
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
-				<input type="text" name="Guess" class="inputField" ng-model="input.letter" ng-minlength="1" ng-maxlength="1">
+				<input type="text" name="Guess" class="inputField" placeholder="Vul hier een letter in" ng-model="input.letter" ng-minlength="1" ng-maxlength="1">
 			</div>
 			<div class="col-md-3"></div>
 		</div>
+		<br/><br/>
 		
 		<div class="row">
 			<div class="col-md-4"></div>
