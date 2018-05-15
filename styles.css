@@ -7,6 +7,8 @@ body	{
 }
 
 .fa-dice	{
+	position: relative;
+	margin-top: 20px;
 	font-size: 100px;
 	color: #ff0000;
 }
@@ -53,4 +55,13 @@ body	{
 
 .chances	{
 	font-size: 20px;
+}
+
+
+@media (max-width: 767.98px) { 
+
+	.container	{
+		width: 100%;
+	}
+
 }
