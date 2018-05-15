@@ -1,0 +1,26 @@
+/*body	{
+	background-color: 	#b3b3b3;
+}
+*/
+.guesses	{
+	text-align: center;
+}
+
+.fa-dice	{
+	font-size: 100px;
+	color: #ff0000;
+}
+
+.fa-thumbs-up	{
+	font-size: 100px;
+	color: #ff0000;
+}
+
+.fa-thumbs-down	{
+	font-size: 100px;
+	color: #ff0000;
+}
+
+.inputField	{
+	width: 100%;
+}

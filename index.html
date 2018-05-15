@@ -5,6 +5,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 	<script src="app.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
 <div class= "container">
@@ -16,24 +18,44 @@
     </div>
   </div>
 
+
 	<div>
-		<div>
-			Guesses Left: {{guesses}}
-		</div>
-		<div>
-			Your incorrect guesses: 
-			<span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
-		</div>
-		<div>
-			Your correct guesses:
-			<span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
+		<div class="guesses">
+			<i class="fas fa-dice"></i> {{guesses}}
 		</div>
 
-		<div>You have to guess: {{displayWord}} </div>
-		<div>
-			<input type="text" name="Guess" ng-model="input.letter" ng-minlength="1" ng-maxlength="1">
-			<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="letterChosen()">Submit</button>
+		<div class="row">
+			<div class="col-md-6 guesses">
+				<i class="far fa-thumbs-up iconGuess"></i> <br/>
+				<span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+			</div>
+
+			<div class="col-md-6 guesses">
+				<i class="far fa-thumbs-down iconGuess"></i><br/>
+				<span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
+			</div>
+
 		</div>
+
+		<div class="guesses">You have to guess: {{displayWord}} </div>
+		
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<input type="text" name="Guess" class="inputField" ng-model="input.letter" ng-minlength="1" ng-maxlength="1">
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<button type="button" class="btn btn-primary btn-lg btn-block submit" ng-click="letterChosen()">Submit</button>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+
+
 	</div>
 </div>
 </body>
