@@ -12,12 +12,12 @@ body	{
 }
 
 .fa-thumbs-up	{
-	font-size: 100px;
+	font-size: 80px;
 	color: #ff0000;
 }
 
 .fa-thumbs-down	{
-	font-size: 100px;
+	font-size: 80px;
 	color: #ff0000;
 }
 
@@ -31,4 +31,26 @@ body	{
 
 .jumbotron	{
 	height: 275px;
+}
+
+.letter	{
+	font-weight: 400;
+	font-size: 25px;
+	font-style: italic;
+}
+
+.letterincorrect	{
+	font-weight: 400;
+	text-decoration: line-through;
+	font-size: 25px;
+	font-style: italic;
+}
+
+.guessWord	{
+	font-weight: 400;
+	font-size: 35px;
+}
+
+.chances	{
+	font-size: 20px;
 }
